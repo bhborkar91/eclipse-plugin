@@ -6,21 +6,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.bhborkar.ide</groupId>
 	<artifactId>com.bhborkar.ide.plugin</artifactId>
-	<version>1.2.0</version>
+	<version>1.5.1</version>
 	<parent>
 		<groupId>com.bhborkar.ide</groupId>
 		<artifactId>com.bhborkar.ide.parent</artifactId>
 		<version>1.0.0</version>
 	</parent>
 	<packaging>eclipse-plugin</packaging>
-
-	<dependencies>
-		<dependency>
-			<groupId>com.bhborkar.ide</groupId>
-			<artifactId>com.bhborkar.ide.osgilibrary</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-	</dependencies>
 
 	<build>
 		<plugins>
@@ -44,21 +36,25 @@
 				<version>2.10</version>
 				<executions>
 					<execution>
-						<id>copy-libraries</id>
+						<id>copy-dependencies</id>
 						<phase>validate</phase>
 						<goals>
 							<goal>copy</goal>
 						</goals>
 						<configuration>
 							<artifactItems>
-								<item>
+								<artifactItem>
 									<groupId>com.bhborkar.ide</groupId>
 									<artifactId>com.bhborkar.ide.library</artifactId>
-									<version>0.0.1-SNAPSHOT</version>
-								</item>
+									<version>1.0.0</version>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.apache.commons</groupId>
+									<artifactId>commons-collections4</artifactId>
+									<version>4.4</version>
+								</artifactItem>
 							</artifactItems>
 							<outputDirectory>lib</outputDirectory>
-							<stripVersion>true</stripVersion>
 							<overWriteReleases>true</overWriteReleases>
 							<overWriteSnapshots>true</overWriteSnapshots>
 						</configuration>
@@ -91,6 +87,9 @@
 										</versionRange>
 										<goals>
 											<goal>copy</goal>
+											<goal>
+												copy-dependencies
+											</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>

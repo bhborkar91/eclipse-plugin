@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Plugin
 Bundle-SymbolicName: com.bhborkar.ide.plugin;singleton:=true
-Bundle-Version: 1.2.0
+Bundle-Version: 1.5.1
 Require-Bundle: javax.inject,
  org.eclipse.osgi,
  org.eclipse.jface,
@@ -12,5 +12,6 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: com.bhborkar.ide.osgi,
  javax.annotation;version="1.2.0"
 Automatic-Module-Name: bhborkar.plugin
-Bundle-ClassPath: lib/com.bhborkar.ide.library.jar,
+Bundle-ClassPath: lib/com.bhborkar.ide.library-1.0.0.jar,
+ lib/commons-collections4-4.4.jar,
  .

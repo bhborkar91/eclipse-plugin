@@ -14,15 +14,6 @@
 	</parent>
 	<packaging>eclipse-plugin</packaging>
 
-	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-text -->
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-text</artifactId>
-			<version>1.9</version>
-		</dependency>
-	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -48,9 +39,21 @@
 						<id>copy-dependencies</id>
 						<phase>validate</phase>
 						<goals>
-							<goal>copy-dependencies</goal>
+							<goal>copy</goal>
 						</goals>
 						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>org.apache.commons</groupId>
+									<artifactId>commons-text</artifactId>
+									<version>1.9</version>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.apache.commons</groupId>
+									<artifactId>commons-lang3</artifactId>
+									<version>3.11</version>
+								</artifactItem>
+							</artifactItems>
 							<outputDirectory>lib</outputDirectory>
 							<overWriteReleases>true</overWriteReleases>
 							<overWriteSnapshots>true</overWriteSnapshots>

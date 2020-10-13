@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: com.bhborkar.ide.osgilibrary
+Bundle-SymbolicName: com.bhborkar.ide.osgilibrary
+Bundle-Version: 1.0.0
+Automatic-Module-Name: bhborkar.osgi.library
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ClassPath: .,
+ lib/commons-lang3-3.11.jar,
+ lib/commons-text-1.9.jar
+Export-Package: com.bhborkar.ide.osgi

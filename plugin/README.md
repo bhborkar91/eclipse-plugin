@@ -38,11 +38,11 @@ This plugin adds the following to eclipse
 
 These files explain the purpose and the configuration of each project
 
-- [A JAR dependency for the plugin](library/README.md)
-- [An OSGi dependency for the plugin](osgi-library/README.md)
-- [The plugin project](plugin/README.md)
-- [The feature that includes the plugin](plugin.feature/README.md)
-- [The update site for the plugin](update-site/README.md)
+- [A JAR dependency for the plugin](library/)
+- [An OSGi dependency for the plugin](osgi-library/)
+- [The plugin project](plugin/)
+- [The feature that includes the plugin](plugin.feature/)
+- [The update site for the plugin](update-site/)
 
 ## References
 

@@ -20,6 +20,20 @@ This is a project created to understand how eclipse plugins are structured and b
 - Right-click `com.bhborkar.ide.plugin` and go to `Run as -> Eclipse Application`
 - A new instance of eclipse is opened, with the plugin installed
 
+## Installing into standalone eclipse
+
+- Build the repo using `mvn clean install` from the parent project
+- Eclipse update site will be created in the project `com.bhborkar.ide.update-site` at `target/site`
+- In your eclipse instance, go to `Help -> Install New Software`
+- Add a new software site (give it the path of the local folder above)
+- Select and install the feature, restart eclipse
+
+## Plugin implmentation
+
+This plugin adds the following to eclipse
+
+- A menu with a Hello World menu option which shows a message dialog
+
 ## Individual project README's
 
 These files explain the purpose and the configuration of each project
